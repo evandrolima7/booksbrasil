@@ -1,0 +1,32 @@
+<form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+  <div>
+    <h1>Adicionar Livro</h1>
+
+    <label for="title">Título:</label>
+    <input id="title" formControlName="title" />
+    <small *ngIf="hasError('title','required')" class="error">
+      O título é obrigatório.
+    </small>
+  </div>
+
+  <div>
+    <label for="author">Autor:</label>
+    <input id="author" formControlName="author" />
+    <small *ngIf="hasError('author','required')" class="error">
+      O autor é obrigatório.
+    </small>
+  </div>
+
+  <div>
+    <label for="description">Descrição:</label>
+    <textarea id="description" formControlName="description"></textarea>
+    <small *ngIf="hasError('description','required')" class="error">
+      A descrição é obrigatória.
+    </small>
+    <small *ngIf="hasError('description','minlength')" class="error">
+      Mínimo de 10 caracteres.
+    </small>
+  </div>
+
+  <button type="submit">Adicionar Livro</button>
+</form>
