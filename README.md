@@ -1,27 +1,66 @@
-# Books
+📚 Gerenciador de Livros - Angular
+Sistema simples de cadastro, listagem e remoção de livros, desenvolvido com Angular e JSON Server. Ideal para fins de aprendizado e demonstração de habilidades em Angular.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
+🧰 Tecnologias Utilizadas
+Angular 14+
 
-## Development server
+RxJS
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+JSON Server
 
-## Code scaffolding
+TypeScript
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Reactive Forms
 
-## Build
+📦 Instalação
+Clone o repositório:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+git clone https://github.com/evandrolima7/booksbrasil.git
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Instale as dependências:
 
-## Running end-to-end tests
+npm install
+Inicie o servidor JSON:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+npx json-server --watch db.json --port 3000
+Em outro terminal, inicie o servidor Angular:
 
-## Further help
+ng serve
+Acesse http://localhost:4200 no seu navegador.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+🧪 Funcionalidades
+✅ Adicionar novos livros com título, autor e descrição
+
+✅ Listar todos os livros cadastrados
+
+✅ Deletar livros existentes
+
+✅ Validação de formulários com mensagens de erro
+
+✅ Spinner de carregamento durante requisições
+
+📁 Estrutura do Projeto
+css
+Copiar
+Editar
+src/
+├── app/
+│   ├── components/
+│   │   ├── all-books/
+│   │   ├── forAdd/
+│   │   ├── navbar/
+│   │   └── footer/
+│   ├── service/
+│   │   └── addbook.service.ts
+│   ├── Interface/
+│   │   └── InterfaceBook.ts
+│   └── app-routing.module.ts
+├── assets/
+│   └── demo.gif
+├── db.json
+└── index.html
+
+📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
